@@ -1,0 +1,724 @@
+@import './button';
+@import './typography';
+@import './color';
+@import './header';
+@import './reset';
+@import './body';
+@import './breakpoints';
+@import './layout';
+@import './footer';
+
+
+@include  desktop-navbar;
+
+.hero{
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
+
+    .hero-text h1{
+        @include h1-md;
+        padding-left: 10rem;
+        color: $secondary;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        width: 80%;
+    }
+
+    .hero-text p{
+        @include p-md;
+        padding-left: 2rem;
+        color: $secondary;
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        width: 80%;
+    }
+
+    .hero-text button{
+        @include button-sm;
+        font-family: $poppins;
+        font-weight: $black;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+
+        &:hover{
+            @include button-hover-sm;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.hero-img{
+    width: 80%;
+}
+.hero-img #gow{
+    width: 100%;
+}
+
+
+.features{
+    @include desktop-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .features-text h1{
+        @include h1-sm;
+        color: $secondary;
+        padding-left: 10rem;
+        padding-bottom: 6rem;
+        width: 60%;
+    }
+}
+
+.features-icon{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 10rem 0 10rem;
+    gap: 6rem;
+    text-align: center;
+    align-items: center;
+}
+
+    .features-icon h2 {
+        @include h2-xs;
+        color: $secondary;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .features-icon p{
+        @include p-xs;
+        color: $secondary;
+        padding-bottom: 2rem;
+        padding: 0 6rem 0 6rem;
+        width: 100%;
+    }
+
+                /* <--- Tendencia ---> */
+
+                .trending{
+                    @include desktop-flex;
+                    width: 100%;
+                    height: 100%;
+                    flex-wrap: wrap;
+            
+                    .trending-text h1{
+                        @include h1-md;
+                        color: $secondary;
+                        padding-bottom: 2rem;
+                    }
+            
+                    .trending-text p{
+                        @include p-md;
+                        color: $secondary;
+                        padding-bottom: 2rem;
+                    }
+                }
+        
+                #carouselExampleIndicators{
+                    display: none;
+                }
+        
+                .carousel-games{
+                    @include desktop-flex;
+                    gap: 2rem;
+                    width: 100%;
+                }
+        
+                .carousel-games img{
+                    width: 15%;
+                }
+/* Desktop (1920p and down) */
+@include lt-xl{
+
+    @include  desktop-navbar;
+
+    .hero{
+        @include desktop-flex;
+        width: 100%;
+        height: 100%;
+
+        .hero-text h1{
+            @include h1-md;
+            padding-left: 2rem;
+            color: $secondary;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+            width: 80%;
+        }
+
+        .hero-text p{
+            @include p-md;
+            padding-left: 2rem;
+            color: $secondary;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+            width: 80%;
+        }
+
+        .hero-text button{
+            @include button-sm;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+
+            &:hover{
+                @include button-hover-sm;
+                font-family: $poppins;
+                font-weight: $black;
+                margin-bottom: 2rem;
+            }
+        }
+}
+    .hero-img{
+        width: 80%;
+    }
+    .hero-img #gow{
+        width: 100%;
+}
+
+/* <--- Funciones ---> */
+
+.features{
+    @include desktop-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .features-text h1{
+        @include h1-sm;
+        color: $secondary;
+        padding-left: 4rem;
+        padding-bottom: 6rem;
+        width: 60%;
+    }
+}
+
+.features-icon{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 6rem;
+    text-align: center;
+}
+
+    .features-icon h2 {
+        @include h2-xs;
+        color: $secondary;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .features-icon p{
+        @include p-xs;
+        color: $secondary;
+        padding: 0 2rem 0 2rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+            /* <--- Tendencia ---> */
+
+            .trending{
+                @include desktop-flex;
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+        
+                .trending-text h1{
+                    @include h1-md;
+                    color: $secondary;
+                    padding-bottom: 2rem;
+                }
+        
+                .trending-text p{
+                    @include p-md;
+                    color: $secondary;
+                    padding-bottom: 2rem;
+                }
+            }
+    
+            #carouselExampleIndicators{
+                display: none;
+            }
+    
+            .carousel-games{
+                @include desktop-flex;
+                gap: 2rem;
+                width: 100%;
+            }
+    
+            .carousel-games img{
+                width: 20%;
+            }
+    }
+
+
+/* Laptops (1280px and down) */
+@include lt-lg{
+
+    @include  desktop-navbar;
+
+    .hero{
+        @include desktop-flex;
+        width: 100%;
+        height: 100%;
+
+        .hero-text h1{
+            @include h1-xs;
+            color: $secondary;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+            width: 80%;
+        }
+
+        .hero-text p{
+            @include p-xs;
+            color: $secondary;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+            width: 80%;
+        }
+
+        .hero-text button{
+            @include button-xs;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+
+            &:hover{
+                @include button-hover-xs;
+                font-family: $poppins;
+                font-weight: $black;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .hero-img{
+        width: 80%;
+    }
+    .hero-img #gow{
+        width: 100%;
+    }
+
+        /* <--- Tendencia ---> */
+
+        .trending{
+            @include desktop-flex;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+    
+            .trending-text h1{
+                @include h1-md;
+                color: $secondary;
+                padding-bottom: 2rem;
+            }
+    
+            .trending-text p{
+                @include p-md;
+                color: $secondary;
+                padding-bottom: 2rem;
+            }
+        }
+
+        #carouselExampleIndicators{
+            display: none;
+        }
+
+        .carousel-games{
+            @include desktop-flex;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .carousel-games img{
+            width: 20%;
+        }
+}
+
+/* Tablet devices (960px and down) */
+@include lt-md{
+
+    @include  mobile-navbar;
+
+    .hero {
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .hero-text h1{
+            @include h1-lg;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text p{
+            @include p-lg;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text button{
+            @include button-sm;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-bottom: 2rem;
+
+            &:hover{
+                @include button-hover-sm;
+                font-family: $poppins;
+                font-weight: $black;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .hero-img #gow{
+        margin-left: -25%;
+        width: 150%;
+    }
+
+    /* <--- Tendencia ---> */
+
+    .trending{
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .trending-text h1{
+            @include h1-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .trending-text p{
+            @include p-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .main-game__img {
+        width: 100%;
+    }
+
+}
+
+/* Tablet devices (768px and down) */
+@include lt-sm{
+
+    @include  mobile-navbar;
+
+    .hero {
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .hero-text{
+            width: 100%;
+        }
+
+        .hero-text h1{
+            @include h1-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text p{
+            @include p-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text button{
+            @include button-sm;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-bottom: 2rem;
+
+            &:hover{
+                @include button-hover-sm;
+                font-family: $poppins;
+                font-weight: $black;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .hero-img #gow{
+        margin-left: -50%;
+        width: 200%;
+    }
+
+/* <--- Tendencia ---> */
+
+    .trending{
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .trending-text h1{
+            @include h1-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .trending-text p{
+            @include p-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+    }
+
+    #carouselExampleIndicators{
+        display: inline;
+    }
+
+    .carousel-games{
+        display: none;
+    }
+
+    .main-game__img {
+        width: 100%;
+    }
+
+    /* <--- Funciones ---> */
+
+.features{
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .features-text h1{
+        @include h1-sm;
+        color: $secondary;
+        padding: 2rem;
+        width: 100%;
+    }
+}
+
+.features-icon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+    text-align: center;
+    padding: 2rem;
+
+    .feature-real img{
+        width: 50%;
+    }
+}
+
+    .feature-real h2 {
+        @include h1-xs;
+        color: $secondary;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .feature-real p{
+        @include p-md;
+        color: $secondary;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@include lt-xs {
+
+    @include mobile-navbar;
+
+/* <--- Home ---> */
+
+    .hero {
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .hero-text h1{
+            @include h1-sm;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text p{
+            @include p-sm;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .hero-text button{
+            @include button-sm;
+            font-family: $poppins;
+            font-weight: $black;
+            margin-bottom: 2rem;
+
+            &:hover{
+                @include button-hover-sm;
+                font-family: $poppins;
+                font-weight: $black;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .hero-img #gow{
+        margin-left: -50%;
+        width: 200%;
+    }
+
+
+/* <--- Tendencia ---> */
+
+    .trending{
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+
+        .trending-text h1{
+            @include h1-sm;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+
+        .trending-text p{
+            @include p-sm;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .main-game__img {
+        width: 100%;
+    }
+
+
+/* <--- Funciones ---> */
+
+.features{
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .features-text h1{
+        @include h1-sm;
+        color: $secondary;
+        padding: 2rem;
+        width: 100%;
+    }
+}
+
+.features-icon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+    text-align: center;
+    padding: 2rem;
+
+    
+    .feature-real img{
+        width: 50%;
+    }
+}
+
+    .feature-real h2 {
+        @include h2-xs;
+        color: $secondary;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    .feature-real p{
+        @include p-xs;
+        color: $secondary;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+
+/* <--- Conexiones ---> */
+
+.connect{
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .connect-text h1{
+        @include h1-sm;
+        color: $secondary;
+        padding-bottom: 2rem;
+    }
+
+    .connect-text p{
+        @include p-sm;
+        color: $secondary;
+        padding-bottom: 2rem;
+    }
+}
+
+.connect-img img{
+    width: 100%;
+    padding: 4rem;
+}
+
+/* <--- Contacto ---> */
+
+.form{
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    legend{
+        @include h1-xs;
+        color: $secondary;
+        padding: 0 1rem 4rem 1rem;
+    }
+
+    label{
+        font-size: 1rem;
+        font-weight: $black;
+        color: $secondary;
+        width: 100%;
+    }
+
+    input{
+        border-radius: 10px;
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    select{
+        border-radius: 10px;
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    textarea{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    #tryBeta{
+        @include button-hover-sm;
+        font-weight: $black;
+        border-radius: 10px;
+
+    }
+}
+
+}

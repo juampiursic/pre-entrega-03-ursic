@@ -1,0 +1,81 @@
+// H1
+
+/* Tipografías */
+$poppins: 'Poppins', sans-serif;
+$black: 900;
+$regular: 400;
+
+/* Tamaños */
+$h1-size-xl: 7rem;
+$h1-size-lg: 5rem;
+$h1-size-md: 4rem;
+$h1-size-sm: 3rem;
+$h1-size-xs: 2rem;
+$h2-size-xs: 1rem;
+$p-size-lg: 1.4rem;
+$p-size-md: 1.2rem;
+$p-size-sm: 1rem;
+$p-size-xs: 0.8rem;
+
+
+@mixin h1-xl{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h1-size-xl;
+}
+
+@mixin h1-lg{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h1-size-md;
+}
+
+@mixin h1-md{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h1-size-md;
+}
+
+@mixin h1-sm{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h1-size-sm;
+}
+
+@mixin h1-xs{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h1-size-xs;
+}
+
+@mixin h2-xs{
+    font-family: $poppins;
+    font-weight: $black;
+    font-size: $h2-size-xs;
+}
+
+@mixin p-lg{
+    font-family: $poppins;
+    font-weight: $regular;
+    font-size: $p-size-lg;
+}
+
+@mixin p-md{
+    font-family: $poppins;
+    font-weight: $regular;
+    font-size: $p-size-md;
+}
+
+@mixin p-sm{
+    font-family: $poppins;
+    font-weight: $regular;
+    font-size: $p-size-sm;
+}
+
+@mixin p-xs{
+    font-family: $poppins;
+    font-weight: $regular;
+    font-size: $p-size-xs;
+}
+
+
