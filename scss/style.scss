@@ -665,6 +665,7 @@
         @include mobile-flex;
         width: 100%;
         height: 100%;
+        overflow-y: hidden;
 
         .hero-text{
             width: 100%;
@@ -674,6 +675,7 @@
             @include h1-md;
             color: $secondary;
             padding-bottom: 2rem;
+            width: 100%;
         }
 
         .hero-text p{
@@ -697,10 +699,14 @@
         }
     }
 
+    .hero-img{
+        width: 100%;
+    }
     .hero-img #gow{
         margin-left: -50%;
         width: 200%;
     }
+
 
 /* <--- Tendencia ---> */
 

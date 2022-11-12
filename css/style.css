@@ -813,6 +813,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
   }
   .hero .hero-text {
     width: 100%;
@@ -823,6 +824,7 @@ body {
     font-size: 4rem;
     color: whitesmoke;
     padding-bottom: 2rem;
+    width: 100%;
   }
   .hero .hero-text p {
     font-family: "Poppins", sans-serif;
@@ -854,6 +856,9 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     margin-bottom: 2rem;
+  }
+  .hero-img {
+    width: 100%;
   }
   .hero-img #gow {
     margin-left: -50%;
