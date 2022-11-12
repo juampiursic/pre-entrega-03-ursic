@@ -6,7 +6,6 @@
 @import './body';
 @import './breakpoints';
 @import './layout';
-@import './footer';
 
 
 @include  desktop-navbar;
@@ -98,26 +97,26 @@
         width: 100%;
     }
 
-                /* <--- Tendencia ---> */
+/* <--- Tendencia ---> */
 
-                .trending{
-                    @include desktop-flex;
-                    width: 100%;
-                    height: 100%;
-                    flex-wrap: wrap;
+    .trending{
+        @include desktop-flex;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
             
-                    .trending-text h1{
-                        @include h1-md;
-                        color: $secondary;
-                        padding-bottom: 2rem;
-                    }
+    .trending-text h1{
+        @include h1-md;
+        color: $secondary;
+        padding-bottom: 2rem;
+        }
             
-                    .trending-text p{
-                        @include p-md;
-                        color: $secondary;
-                        padding-bottom: 2rem;
-                    }
-                }
+    .trending-text p{
+        @include p-md;
+            color: $secondary;
+            padding-bottom: 2rem;
+        }
+    }
         
                 #carouselExampleIndicators{
                     display: none;
@@ -125,13 +124,84 @@
         
                 .carousel-games{
                     @include desktop-flex;
-                    gap: 2rem;
+                    gap: 6rem;
                     width: 100%;
                 }
         
                 .carousel-games img{
                     width: 15%;
                 }
+
+/* <--- Contacto ---> */
+
+.form{
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .form-text{
+        text-align: center;
+        width: 80%;
+    }
+
+    .form-text h1{
+        @include h1-md;
+        color: $secondary;
+        padding: 0 4rem 6rem 8rem;
+        width: 100%;
+    }
+
+    .form-text img{
+        width: 30%;
+    }
+
+    .form-container{
+        width: 60%;
+        padding: 8rem;
+    }
+
+    legend{
+        @include h1-xs;
+        color: $secondary;
+        padding: 0 1rem 4rem 1rem;
+    }
+
+    label{
+        font-size: 1rem;
+        font-weight: $black;
+        color: $secondary;
+        width: 100%;
+    }
+
+    input{
+        border-radius: 10px;
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    select{
+        border-radius: 10px;
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    textarea{
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    #tryBeta{
+        @include button-hover-sm;
+        font-weight: $black;
+        border-radius: 10px;
+
+    }
+}
+
+
 /* Desktop (1920p and down) */
 @include lt-xl{
 
@@ -258,6 +328,74 @@
             }
     }
 
+    .form{
+        @include desktop-flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+
+        .form-text{
+            text-align: center;
+            width: 80%;
+        }
+
+        .form-text h1{
+            @include h1-sm;
+            color: $secondary;
+            padding: 0 4rem 6rem 8rem;
+            width: 100%;
+        }
+
+        .form-text img{
+            width: 30%;
+        }
+
+        .form-container{
+            width: 60%;
+            padding: 8rem;
+        }
+    
+        legend{
+            @include h1-xs;
+            color: $secondary;
+            padding: 0 1rem 4rem 1rem;
+        }
+    
+        label{
+            font-size: 1rem;
+            font-weight: $black;
+            color: $secondary;
+            width: 100%;
+        }
+    
+        input{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        select{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        textarea{
+            border-radius: 10px;
+            width: 100%;
+        }
+    
+        #tryBeta{
+            @include button-hover-sm;
+            font-weight: $black;
+            border-radius: 10px;
+    
+        }
+    }
+
+
 
 /* Laptops (1280px and down) */
 @include lt-lg{
@@ -342,6 +480,61 @@
         .carousel-games img{
             width: 20%;
         }
+
+        .form{
+            @include desktop-flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+    
+            .form-text{
+                display: none;
+            }
+
+            .form-container{
+                width: 100%;
+                padding: 4rem;
+            }
+        
+            legend{
+                @include h1-xs;
+                color: $secondary;
+                padding: 0 1rem 4rem 1rem;
+            }
+        
+            label{
+                font-size: 1rem;
+                font-weight: $black;
+                color: $secondary;
+                width: 100%;
+            }
+        
+            input{
+                border-radius: 10px;
+                width: 100%;
+                padding: 0.8rem;
+                margin-bottom: 2rem;
+            }
+        
+            select{
+                border-radius: 10px;
+                width: 100%;
+                padding: 0.8rem;
+                margin-bottom: 2rem;
+            }
+        
+            textarea{
+                border-radius: 10px;
+                width: 100%;
+            }
+        
+            #tryBeta{
+                @include button-hover-sm;
+                font-weight: $black;
+                border-radius: 10px;
+        
+            }
+}
 }
 
 /* Tablet devices (960px and down) */
@@ -408,6 +601,57 @@
 
     .main-game__img {
         width: 100%;
+    }
+
+    .form{
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+
+        .form-container{
+            width: 100%;
+            padding: 4rem;
+        }
+    
+        legend{
+            @include h1-xs;
+            color: $secondary;
+            padding: 0 1rem 4rem 1rem;
+        }
+    
+        label{
+            font-size: 1rem;
+            font-weight: $black;
+            color: $secondary;
+            width: 100%;
+        }
+    
+        input{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        select{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        textarea{
+            border-radius: 10px;
+            width: 100%;
+        }
+    
+        #tryBeta{
+            @include button-hover-sm;
+            font-weight: $black;
+            border-radius: 10px;
+    
+        }
     }
 
 }
@@ -531,6 +775,57 @@
         padding-bottom: 2rem;
         text-align: center;
     }
+
+    .form{
+        @include mobile-flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+
+        .form-container{
+            width: 100%;
+            padding: 2rem;
+        }
+    
+        legend{
+            @include h1-xs;
+            color: $secondary;
+            padding: 0 1rem 4rem 1rem;
+        }
+    
+        label{
+            font-size: 1rem;
+            font-weight: $black;
+            color: $secondary;
+            width: 100%;
+        }
+    
+        input{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        select{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 2rem;
+        }
+    
+        textarea{
+            border-radius: 10px;
+            width: 100%;
+        }
+    
+        #tryBeta{
+            @include button-hover-sm;
+            font-weight: $black;
+            border-radius: 10px;
+    
+        }
+    }
 }
 
 
@@ -545,17 +840,21 @@
         @include mobile-flex;
         width: 100%;
         height: 100%;
+        overflow: hidden;
 
         .hero-text h1{
             @include h1-sm;
             color: $secondary;
+            padding-right: 3rem;
             padding-bottom: 2rem;
+            width: 100%;
         }
 
         .hero-text p{
             @include p-sm;
             color: $secondary;
             padding-bottom: 2rem;
+            width: 90%;
         }
 
         .hero-text button{
@@ -573,11 +872,13 @@
         }
     }
 
+    .hero-img{
+        width: 100%;
+    }
     .hero-img #gow{
         margin-left: -50%;
         width: 200%;
     }
-
 
 /* <--- Tendencia ---> */
 
@@ -681,6 +982,11 @@
     height: 100%;
     align-items: center;
 
+    .form-container{
+        width: 100%;
+        padding: 4rem;
+    }
+
     legend{
         @include h1-xs;
         color: $secondary;
@@ -720,5 +1026,4 @@
 
     }
 }
-
 }
