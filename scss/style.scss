@@ -1,762 +1,894 @@
-@import './button';
-@import './typography';
-@import './color';
-@import './header';
-@import './reset';
-@import './body';
-@import './breakpoints';
-@import './layout';
+@import "./button";
+@import "./typography";
+@import "./color";
+@import "./header";
+@import "./reset";
+@import "./body";
+@import "./breakpoints";
+@import "./layout";
 
+@include desktop-navbar;
 
-@include  desktop-navbar;
+.hero {
+  @include desktop-flex;
+  width: 100%;
+  height: 100%;
 
-.hero{
-    @include desktop-flex;
-    width: 100%;
-    height: 100%;
-
-    .hero-text h1{
-        @include h1-md;
-        padding-left: 10rem;
-        color: $secondary;
-        padding-left: 2rem;
-        padding-bottom: 1rem;
-        width: 80%;
-    }
-
-    .hero-text p{
-        @include p-md;
-        padding-left: 2rem;
-        color: $secondary;
-        padding-left: 2rem;
-        padding-bottom: 1rem;
-        width: 80%;
-    }
-
-    .hero-text button{
-        @include button-sm;
-        font-family: $poppins;
-        font-weight: $black;
-        margin-left: 2rem;
-        margin-bottom: 2rem;
-
-        &:hover{
-            @include button-hover-sm;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-bottom: 2rem;
-        }
-    }
-}
-
-.hero-img{
+  .hero-text h1 {
+    @include h1-md;
+    padding-left: 10rem;
+    color: $secondary;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
     width: 80%;
-}
-.hero-img #gow{
-    width: 100%;
+  }
+
+  .hero-text p {
+    @include p-md;
+    padding-left: 2rem;
+    color: $secondary;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+
+  .hero-text button {
+    @include button-sm;
+    font-family: $poppins;
+    font-weight: $black;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+      @include button-hover-sm;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
+.hero-img {
+  width: 80%;
+}
 
-.features{
+.hero-img #gow {
+  width: 100%;
+}
+
+.features {
+  @include desktop-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  .features-text h1 {
+    @include h1-sm;
+    color: $secondary;
+    padding-left: 10rem;
+    padding-bottom: 6rem;
+    width: 60%;
+  }
+}
+
+.features-icon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10rem 0 10rem;
+  gap: 6rem;
+  text-align: center;
+  align-items: center;
+}
+
+.features-icon h2 {
+  @include h2-xs;
+  color: $secondary;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.features-icon p {
+  @include p-xs;
+  color: $secondary;
+  padding-bottom: 2rem;
+  padding: 0 6rem 0 6rem;
+  width: 100%;
+}
+
+/* <--- Tendencia ---> */
+
+.trending {
+  @include desktop-flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+  .trending-text h1 {
+    @include h1-md;
+    color: $secondary;
+    padding-bottom: 2rem;
+  }
+
+  .trending-text p {
+    @include p-md;
+    color: $secondary;
+    padding-bottom: 2rem;
+  }
+}
+
+#carouselExampleIndicators {
+  display: none;
+}
+
+.carousel-games {
+  @include desktop-flex;
+  gap: 6rem;
+  width: 100%;
+}
+
+.carousel-games img {
+  width: 15%;
+}
+
+.connect {
     @include desktop-flex;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    align-items: center;
 
-    .features-text h1{
-        @include h1-sm;
-        color: $secondary;
-        padding-left: 10rem;
-        padding-bottom: 6rem;
-        width: 60%;
+    .connect-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 70%;
     }
-}
 
-.features-icon{
+    .connect-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 70%;
+    }
+  }
+
+.connect-platforms {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0 10rem 0 10rem;
-    gap: 6rem;
-    text-align: center;
-    align-items: center;
-}
+    justify-content: center;
+    gap: 8rem;
+    padding-top: 6rem;
+  }
 
-    .features-icon h2 {
-        @include h2-xs;
-        color: $secondary;
-        padding-top: 2rem;
-        text-align: center;
-    }
-    .features-icon p{
-        @include p-xs;
-        color: $secondary;
-        padding-bottom: 2rem;
-        padding: 0 6rem 0 6rem;
-        width: 100%;
-    }
-
-/* <--- Tendencia ---> */
-
-    .trending{
-        @include desktop-flex;
-            width: 100%;
-            height: 100%;
-            flex-wrap: wrap;
-            
-    .trending-text h1{
-        @include h1-md;
-        color: $secondary;
-        padding-bottom: 2rem;
-        }
-            
-    .trending-text p{
-        @include p-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-    }
-        
-                #carouselExampleIndicators{
-                    display: none;
-                }
-        
-                .carousel-games{
-                    @include desktop-flex;
-                    gap: 6rem;
-                    width: 100%;
-                }
-        
-                .carousel-games img{
-                    width: 15%;
-                }
+  .connect-img img {
+    display: none;
+    width: 100%;
+    padding: 8rem;
+  }
 
 /* <--- Contacto ---> */
 
-.form{
+.form {
+  @include desktop-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  .form-text {
+    text-align: center;
+    width: 80%;
+  }
+
+  .form-text h1 {
+    @include h1-md;
+    color: $secondary;
+    padding: 0 4rem 6rem 8rem;
+    width: 100%;
+  }
+
+  .form-text img {
+    width: 30%;
+  }
+
+  .form-container {
+    width: 60%;
+    padding: 8rem;
+  }
+
+  legend {
+    @include h1-xs;
+    color: $secondary;
+    padding: 0 1rem 4rem 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: $black;
+    color: $secondary;
+    width: 100%;
+  }
+
+  input {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  select {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  textarea {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #tryBeta {
+    @include button-hover-sm;
+    font-weight: $black;
+    border-radius: 10px;
+  }
+}
+
+/* Desktop (1920p and down) */
+@include lt-xl {
+  @include desktop-navbar;
+
+  .hero {
     @include desktop-flex;
     width: 100%;
     height: 100%;
-    align-items: center;
 
-    .form-text{
-        text-align: center;
-        width: 80%;
+    .hero-text h1 {
+      @include h1-md;
+      padding-left: 2rem;
+      color: $secondary;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+      width: 80%;
     }
 
-    .form-text h1{
-        @include h1-md;
-        color: $secondary;
-        padding: 0 4rem 6rem 8rem;
-        width: 100%;
+    .hero-text p {
+      @include p-md;
+      padding-left: 2rem;
+      color: $secondary;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+      width: 80%;
     }
 
-    .form-text img{
-        width: 30%;
-    }
+    .hero-text button {
+      @include button-sm;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
 
-    .form-container{
-        width: 60%;
-        padding: 8rem;
-    }
-
-    legend{
-        @include h1-xs;
-        color: $secondary;
-        padding: 0 1rem 4rem 1rem;
-    }
-
-    label{
-        font-size: 1rem;
-        font-weight: $black;
-        color: $secondary;
-        width: 100%;
-    }
-
-    input{
-        border-radius: 10px;
-        width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 2rem;
-    }
-
-    select{
-        border-radius: 10px;
-        width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 2rem;
-    }
-
-    textarea{
-        border-radius: 10px;
-        width: 100%;
-    }
-
-    #tryBeta{
+      &:hover {
         @include button-hover-sm;
+        font-family: $poppins;
         font-weight: $black;
-        border-radius: 10px;
-
+        margin-bottom: 2rem;
+      }
     }
-}
+  }
 
+  .hero-img {
+    width: 80%;
+  }
 
-/* Desktop (1920p and down) */
-@include lt-xl{
+  .hero-img #gow {
+    width: 100%;
+  }
 
-    @include  desktop-navbar;
+  /* <--- Funciones ---> */
 
-    .hero{
-        @include desktop-flex;
-        width: 100%;
-        height: 100%;
-
-        .hero-text h1{
-            @include h1-md;
-            padding-left: 2rem;
-            color: $secondary;
-            padding-left: 2rem;
-            padding-bottom: 1rem;
-            width: 80%;
-        }
-
-        .hero-text p{
-            @include p-md;
-            padding-left: 2rem;
-            color: $secondary;
-            padding-left: 2rem;
-            padding-bottom: 1rem;
-            width: 80%;
-        }
-
-        .hero-text button{
-            @include button-sm;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-left: 2rem;
-            margin-bottom: 2rem;
-
-            &:hover{
-                @include button-hover-sm;
-                font-family: $poppins;
-                font-weight: $black;
-                margin-bottom: 2rem;
-            }
-        }
-}
-    .hero-img{
-        width: 80%;
-    }
-    .hero-img #gow{
-        width: 100%;
-}
-
-/* <--- Funciones ---> */
-
-.features{
+  .features {
     @include desktop-flex;
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
     align-items: center;
 
-    .features-text h1{
-        @include h1-sm;
-        color: $secondary;
-        padding-left: 4rem;
-        padding-bottom: 6rem;
-        width: 60%;
+    .features-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-left: 4rem;
+      padding-bottom: 6rem;
+      width: 60%;
     }
-}
+  }
 
-.features-icon{
+  .features-icon {
     display: flex;
     flex-direction: row;
     width: 100%;
     gap: 6rem;
     text-align: center;
+  }
+
+  .features-icon h2 {
+    @include h2-xs;
+    color: $secondary;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .features-icon p {
+    @include p-xs;
+    color: $secondary;
+    padding: 0 2rem 0 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* <--- Tendencia ---> */
+
+  .trending {
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+
+    .trending-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+
+    .trending-text p {
+      @include p-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
+
+  #carouselExampleIndicators {
+    display: none;
+  }
+
+  .carousel-games {
+    @include desktop-flex;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .carousel-games img {
+    width: 20%;
+  }
 }
 
-    .features-icon h2 {
-        @include h2-xs;
-        color: $secondary;
-        padding-top: 2rem;
-        text-align: center;
-    }
-    .features-icon p{
-        @include p-xs;
-        color: $secondary;
-        padding: 0 2rem 0 2rem;
-        padding-bottom: 2rem;
-        text-align: center;
-    }
+.connect {
+    @include desktop-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 
-            /* <--- Tendencia ---> */
-
-            .trending{
-                @include desktop-flex;
-                width: 100%;
-                height: 100%;
-                flex-wrap: wrap;
-        
-                .trending-text h1{
-                    @include h1-md;
-                    color: $secondary;
-                    padding-bottom: 2rem;
-                }
-        
-                .trending-text p{
-                    @include p-md;
-                    color: $secondary;
-                    padding-bottom: 2rem;
-                }
-            }
-    
-            #carouselExampleIndicators{
-                display: none;
-            }
-    
-            .carousel-games{
-                @include desktop-flex;
-                gap: 2rem;
-                width: 100%;
-            }
-    
-            .carousel-games img{
-                width: 20%;
-            }
+    .connect-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 70%;
     }
 
-    .form{
-        @include desktop-flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-
-        .form-text{
-            text-align: center;
-            width: 80%;
-        }
-
-        .form-text h1{
-            @include h1-sm;
-            color: $secondary;
-            padding: 0 4rem 6rem 8rem;
-            width: 100%;
-        }
-
-        .form-text img{
-            width: 30%;
-        }
-
-        .form-container{
-            width: 60%;
-            padding: 8rem;
-        }
-    
-        legend{
-            @include h1-xs;
-            color: $secondary;
-            padding: 0 1rem 4rem 1rem;
-        }
-    
-        label{
-            font-size: 1rem;
-            font-weight: $black;
-            color: $secondary;
-            width: 100%;
-        }
-    
-        input{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        select{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        textarea{
-            border-radius: 10px;
-            width: 100%;
-        }
-    
-        #tryBeta{
-            @include button-hover-sm;
-            font-weight: $black;
-            border-radius: 10px;
-    
-        }
+    .connect-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 70%;
     }
+  }
 
+.connect-platforms {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 8rem;
+    padding-top: 6rem;
+  }
 
+  .connect-img img {
+    display: none;
+    width: 100%;
+    padding: 8rem;
+  }
+
+.form {
+  @include desktop-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  .form-text {
+    text-align: center;
+    width: 80%;
+  }
+
+  .form-text h1 {
+    @include h1-sm;
+    color: $secondary;
+    padding: 0 4rem 6rem 8rem;
+    width: 100%;
+  }
+
+  .form-text img {
+    width: 30%;
+  }
+
+  .form-container {
+    width: 60%;
+    padding: 8rem;
+  }
+
+  legend {
+    @include h1-xs;
+    color: $secondary;
+    padding: 0 1rem 4rem 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: $black;
+    color: $secondary;
+    width: 100%;
+  }
+
+  input {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  select {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  textarea {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  #tryBeta {
+    @include button-hover-sm;
+    font-weight: $black;
+    border-radius: 10px;
+  }
+}
 
 /* Laptops (1280px and down) */
-@include lt-lg{
+@include lt-lg {
+  @include desktop-navbar;
 
-    @include  desktop-navbar;
+  .hero {
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
 
-    .hero{
+    .hero-text h1 {
+      @include h1-xs;
+      color: $secondary;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+      width: 80%;
+    }
+
+    .hero-text p {
+      @include p-xs;
+      color: $secondary;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+      width: 80%;
+    }
+
+    .hero-text button {
+      @include button-xs;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-left: 2rem;
+      margin-bottom: 2rem;
+
+      &:hover {
+        @include button-hover-xs;
+        font-family: $poppins;
+        font-weight: $black;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .hero-img #gow {
+    width: 100%;
+  }
+
+  /* <--- Tendencia ---> */
+
+  .trending {
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+
+    .trending-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+
+    .trending-text p {
+      @include p-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
+
+  #carouselExampleIndicators {
+    display: none;
+  }
+
+  .carousel-games {
+    @include desktop-flex;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .carousel-games img {
+    width: 20%;
+  }
+
+
+    /* <--- Conexiones ---> */
+
+    .connect {
         @include desktop-flex;
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
-
-        .hero-text h1{
-            @include h1-xs;
-            color: $secondary;
-            padding-left: 2rem;
-            padding-bottom: 1rem;
-            width: 80%;
+    
+        .connect-text h1 {
+          @include h1-sm;
+          color: $secondary;
+          padding-bottom: 2rem;
         }
-
-        .hero-text p{
-            @include p-xs;
-            color: $secondary;
-            padding-left: 2rem;
-            padding-bottom: 1rem;
-            width: 80%;
+    
+        .connect-text p {
+          @include p-sm;
+          color: $secondary;
+          padding-bottom: 2rem;
         }
-
-        .hero-text button{
-            @include button-xs;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-left: 2rem;
-            margin-bottom: 2rem;
-
-            &:hover{
-                @include button-hover-xs;
-                font-family: $poppins;
-                font-weight: $black;
-                margin-bottom: 2rem;
-            }
-        }
-    }
-
-    .hero-img{
-        width: 80%;
-    }
-    .hero-img #gow{
+      }
+    
+      .connect-platforms {
+        display: flex;
+        flex-direction: row;
         width: 100%;
+        justify-content: center;
+        gap: 4rem;
+      }
+    
+      .connect-img img {
+        display: none;
+        width: 100%;
+        padding: 8rem;
+      }
+    
+
+  .form {
+    @include desktop-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .form-text {
+      display: none;
     }
 
-        /* <--- Tendencia ---> */
+    .form-container {
+      width: 100%;
+      padding: 4rem;
+    }
 
-        .trending{
-            @include desktop-flex;
-            width: 100%;
-            height: 100%;
-            flex-wrap: wrap;
-    
-            .trending-text h1{
-                @include h1-md;
-                color: $secondary;
-                padding-bottom: 2rem;
-            }
-    
-            .trending-text p{
-                @include p-md;
-                color: $secondary;
-                padding-bottom: 2rem;
-            }
-        }
+    legend {
+      @include h1-xs;
+      color: $secondary;
+      padding: 0 1rem 4rem 1rem;
+    }
 
-        #carouselExampleIndicators{
-            display: none;
-        }
+    label {
+      font-size: 1rem;
+      font-weight: $black;
+      color: $secondary;
+      width: 100%;
+    }
 
-        .carousel-games{
-            @include desktop-flex;
-            gap: 2rem;
-            width: 100%;
-        }
+    input {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
 
-        .carousel-games img{
-            width: 20%;
-        }
+    select {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
 
-        .form{
-            @include desktop-flex;
-            width: 100%;
-            height: 100%;
-            align-items: center;
-    
-            .form-text{
-                display: none;
-            }
+    textarea {
+      border-radius: 10px;
+      width: 100%;
+    }
 
-            .form-container{
-                width: 100%;
-                padding: 4rem;
-            }
-        
-            legend{
-                @include h1-xs;
-                color: $secondary;
-                padding: 0 1rem 4rem 1rem;
-            }
-        
-            label{
-                font-size: 1rem;
-                font-weight: $black;
-                color: $secondary;
-                width: 100%;
-            }
-        
-            input{
-                border-radius: 10px;
-                width: 100%;
-                padding: 0.8rem;
-                margin-bottom: 2rem;
-            }
-        
-            select{
-                border-radius: 10px;
-                width: 100%;
-                padding: 0.8rem;
-                margin-bottom: 2rem;
-            }
-        
-            textarea{
-                border-radius: 10px;
-                width: 100%;
-            }
-        
-            #tryBeta{
-                @include button-hover-sm;
-                font-weight: $black;
-                border-radius: 10px;
-        
-            }
-}
+    #tryBeta {
+      @include button-hover-sm;
+      font-weight: $black;
+      border-radius: 10px;
+    }
+  }
 }
 
 /* Tablet devices (960px and down) */
-@include lt-md{
+@include lt-md {
+  @include mobile-navbar;
 
-    @include  mobile-navbar;
+  .hero {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
 
-    .hero {
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-
-        .hero-text h1{
-            @include h1-lg;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-
-        .hero-text p{
-            @include p-lg;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-
-        .hero-text button{
-            @include button-sm;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-bottom: 2rem;
-
-            &:hover{
-                @include button-hover-sm;
-                font-family: $poppins;
-                font-weight: $black;
-                margin-bottom: 2rem;
-            }
-        }
+    .hero-text h1 {
+      @include h1-lg;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
-    .hero-img #gow{
-        margin-left: -25%;
-        width: 150%;
+    .hero-text p {
+      @include p-lg;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
-    /* <--- Tendencia ---> */
+    .hero-text button {
+      @include button-sm;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-bottom: 2rem;
 
-    .trending{
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
+      &:hover {
+        @include button-hover-sm;
+        font-family: $poppins;
+        font-weight: $black;
+        margin-bottom: 2rem;
+      }
+    }
+  }
 
-        .trending-text h1{
-            @include h1-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
+  .hero-img #gow {
+    margin-left: -25%;
+    width: 150%;
+  }
 
-        .trending-text p{
-            @include p-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
+  /* <--- Tendencia ---> */
+
+  .trending {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .trending-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
-    .main-game__img {
-        width: 100%;
+    .trending-text p {
+      @include p-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .main-game__img {
+    width: 100%;
+  }
+
+  /* <--- Conexiones ---> */
+
+  .connect {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .connect-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
-    .form{
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-
-        .form-container{
-            width: 100%;
-            padding: 4rem;
-        }
-    
-        legend{
-            @include h1-xs;
-            color: $secondary;
-            padding: 0 1rem 4rem 1rem;
-        }
-    
-        label{
-            font-size: 1rem;
-            font-weight: $black;
-            color: $secondary;
-            width: 100%;
-        }
-    
-        input{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        select{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        textarea{
-            border-radius: 10px;
-            width: 100%;
-        }
-    
-        #tryBeta{
-            @include button-hover-sm;
-            font-weight: $black;
-            border-radius: 10px;
-    
-        }
+    .connect-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
+  }
 
-}
+  .connect-platforms {
+    display: none;
+  }
 
-/* Tablet devices (768px and down) */
-@include lt-sm{
-
-    @include  mobile-navbar;
-
-    .hero {
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-        overflow-y: hidden;
-
-        .hero-text{
-            width: 100%;
-        }
-
-        .hero-text h1{
-            @include h1-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-            width: 100%;
-        }
-
-        .hero-text p{
-            @include p-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-
-        .hero-text button{
-            @include button-sm;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-bottom: 2rem;
-
-            &:hover{
-                @include button-hover-sm;
-                font-family: $poppins;
-                font-weight: $black;
-                margin-bottom: 2rem;
-            }
-        }
-    }
-
-    .hero-img{
-        width: 100%;
-    }
-    .hero-img #gow{
-        margin-left: -50%;
-        width: 200%;
-    }
+  .connect-img img {
+    display: inline;
+    width: 100%;
+    padding: 8rem;
+  }
 
 
-/* <--- Tendencia ---> */
-
-    .trending{
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-
-        .trending-text h1{
-            @include h1-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-
-        .trending-text p{
-            @include p-md;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-    }
-
-    #carouselExampleIndicators{
-        display: inline;
-    }
-
-    .carousel-games{
-        display: none;
-    }
-
-    .main-game__img {
-        width: 100%;
-    }
-
-    /* <--- Funciones ---> */
-
-.features{
+  .form {
     @include mobile-flex;
     width: 100%;
     height: 100%;
     align-items: center;
 
-    .features-text h1{
-        @include h1-sm;
-        color: $secondary;
-        padding: 2rem;
-        width: 100%;
+    .form-container {
+      width: 100%;
+      padding: 4rem;
     }
+
+    legend {
+      @include h1-xs;
+      color: $secondary;
+      padding: 0 1rem 4rem 1rem;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: $black;
+      color: $secondary;
+      width: 100%;
+    }
+
+    input {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    select {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    textarea {
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    #tryBeta {
+      @include button-hover-sm;
+      font-weight: $black;
+      border-radius: 10px;
+    }
+  }
 }
 
-.features-icon{
+/* Tablet devices (768px and down) */
+@include lt-sm {
+  @include mobile-navbar;
+
+  .hero {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    .hero-text {
+      width: 100%;
+    }
+
+    .hero-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 100%;
+    }
+
+    .hero-text p {
+      @include p-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+
+    .hero-text button {
+      @include button-sm;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-bottom: 2rem;
+
+      &:hover {
+        @include button-hover-sm;
+        font-family: $poppins;
+        font-weight: $black;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-img #gow {
+    margin-left: -50%;
+    width: 200%;
+  }
+
+  /* <--- Tendencia ---> */
+
+  .trending {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .trending-text h1 {
+      @include h1-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+
+    .trending-text p {
+      @include p-md;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
+
+  #carouselExampleIndicators {
+    display: inline;
+  }
+
+  .carousel-games {
+    display: none;
+  }
+
+  .main-game__img {
+    width: 100%;
+  }
+
+  /* <--- Funciones ---> */
+
+  .features {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .features-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding: 2rem;
+      width: 100%;
+    }
+  }
+
+  .features-icon {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -764,170 +896,201 @@
     text-align: center;
     padding: 2rem;
 
-    .feature-real img{
-        width: 50%;
+    .feature-real img {
+      width: 50%;
     }
+  }
+
+  .feature-real h2 {
+    @include h1-xs;
+    color: $secondary;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .feature-real p {
+    @include p-md;
+    color: $secondary;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* <--- Conexiones ---> */
+
+  .connect {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .connect-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+
+    .connect-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .connect-platforms {
+    display: none;
+  }
+
+  .connect-img img {
+    width: 100%;
+    padding: 8rem;
+  }
+
+
+  /* <--- Contacto ---> */
+
+  .form {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    .form-container {
+      width: 100%;
+      padding: 2rem;
+    }
+
+    legend {
+      @include h1-xs;
+      color: $secondary;
+      padding: 0 1rem 4rem 1rem;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: $black;
+      color: $secondary;
+      width: 100%;
+    }
+
+    input {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    select {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    textarea {
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    #tryBeta {
+      @include button-hover-sm;
+      font-weight: $black;
+      border-radius: 10px;
+    }
+  }
 }
-
-    .feature-real h2 {
-        @include h1-xs;
-        color: $secondary;
-        padding-top: 2rem;
-        text-align: center;
-    }
-    .feature-real p{
-        @include p-md;
-        color: $secondary;
-        padding-bottom: 2rem;
-        text-align: center;
-    }
-
-    .form{
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-
-        .form-container{
-            width: 100%;
-            padding: 2rem;
-        }
-    
-        legend{
-            @include h1-xs;
-            color: $secondary;
-            padding: 0 1rem 4rem 1rem;
-        }
-    
-        label{
-            font-size: 1rem;
-            font-weight: $black;
-            color: $secondary;
-            width: 100%;
-        }
-    
-        input{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        select{
-            border-radius: 10px;
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 2rem;
-        }
-    
-        textarea{
-            border-radius: 10px;
-            width: 100%;
-        }
-    
-        #tryBeta{
-            @include button-hover-sm;
-            font-weight: $black;
-            border-radius: 10px;
-    
-        }
-    }
-}
-
 
 /* Extra small devices (phones, 600px and down) */
 @include lt-xs {
 
-    @include mobile-navbar;
+  @include mobile-navbar;
 
-/* <--- Home ---> */
+  /* <--- Home ---> */
 
-    .hero {
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+  .hero {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
-        .hero-text h1{
-            @include h1-sm;
-            color: $secondary;
-            padding-right: 3rem;
-            padding-bottom: 2rem;
-            width: 100%;
-        }
-
-        .hero-text p{
-            @include p-sm;
-            color: $secondary;
-            padding-bottom: 2rem;
-            width: 90%;
-        }
-
-        .hero-text button{
-            @include button-sm;
-            font-family: $poppins;
-            font-weight: $black;
-            margin-bottom: 2rem;
-
-            &:hover{
-                @include button-hover-sm;
-                font-family: $poppins;
-                font-weight: $black;
-                margin-bottom: 2rem;
-            }
-        }
+    .hero-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding-right: 3rem;
+      padding-bottom: 2rem;
+      width: 100%;
     }
 
-    .hero-img{
-        width: 100%;
-    }
-    .hero-img #gow{
-        margin-left: -50%;
-        width: 200%;
-    }
-
-/* <--- Tendencia ---> */
-
-    .trending{
-        @include mobile-flex;
-        width: 100%;
-        height: 100%;
-
-        .trending-text h1{
-            @include h1-sm;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
-
-        .trending-text p{
-            @include p-sm;
-            color: $secondary;
-            padding-bottom: 2rem;
-        }
+    .hero-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+      width: 90%;
     }
 
-    .main-game__img {
-        width: 100%;
+    .hero-text button {
+      @include button-sm;
+      font-family: $poppins;
+      font-weight: $black;
+      margin-bottom: 2rem;
+
+      &:hover {
+        @include button-hover-sm;
+        font-family: $poppins;
+        font-weight: $black;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-img #gow {
+    margin-left: -50%;
+    width: 200%;
+  }
+
+  /* <--- Tendencia ---> */
+
+  .trending {
+    @include mobile-flex;
+    width: 100%;
+    height: 100%;
+
+    .trending-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
+    .trending-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+  }
 
-/* <--- Funciones ---> */
+  .main-game__img {
+    width: 100%;
+  }
 
-.features{
+  /* <--- Funciones ---> */
+
+  .features {
     @include mobile-flex;
     width: 100%;
     height: 100%;
     align-items: center;
 
-    .features-text h1{
-        @include h1-sm;
-        color: $secondary;
-        padding: 2rem;
-        width: 100%;
+    .features-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding: 2rem;
+      width: 100%;
     }
-}
+  }
 
-.features-icon{
+  .features-icon {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -935,101 +1098,103 @@
     text-align: center;
     padding: 2rem;
 
-    
-    .feature-real img{
-        width: 50%;
+    .feature-real img {
+      width: 50%;
     }
-}
+  }
 
-    .feature-real h2 {
-        @include h2-xs;
-        color: $secondary;
-        padding-top: 2rem;
-        text-align: center;
-    }
-    .feature-real p{
-        @include p-xs;
-        color: $secondary;
-        padding-bottom: 2rem;
-        text-align: center;
-    }
+  .feature-real h2 {
+    @include h2-xs;
+    color: $secondary;
+    padding-top: 2rem;
+    text-align: center;
+  }
 
+  .feature-real p {
+    @include p-xs;
+    color: $secondary;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
 
-/* <--- Conexiones ---> */
+  /* <--- Conexiones ---> */
 
-.connect{
+  .connect {
     @include mobile-flex;
     width: 100%;
     height: 100%;
 
-    .connect-text h1{
-        @include h1-sm;
-        color: $secondary;
-        padding-bottom: 2rem;
+    .connect-text h1 {
+      @include h1-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
 
-    .connect-text p{
-        @include p-sm;
-        color: $secondary;
-        padding-bottom: 2rem;
+    .connect-text p {
+      @include p-sm;
+      color: $secondary;
+      padding-bottom: 2rem;
     }
-}
+  }
 
-.connect-img img{
+  .connect-platforms {
+    display: none;
+  }
+
+  .connect-img img {
     width: 100%;
     padding: 4rem;
-}
+  }
 
-/* <--- Contacto ---> */
+  /* <--- Contacto ---> */
 
-.form{
+  .form {
     @include mobile-flex;
     width: 100%;
     height: 100%;
     align-items: center;
 
-    .form-container{
-        width: 100%;
-        padding: 4rem;
+    .form-container {
+      width: 100%;
+      padding: 4rem;
     }
 
-    legend{
-        @include h1-xs;
-        color: $secondary;
-        padding: 0 1rem 4rem 1rem;
+    legend {
+      @include h1-xs;
+      color: $secondary;
+      padding: 0 1rem 4rem 1rem;
     }
 
-    label{
-        font-size: 1rem;
-        font-weight: $black;
-        color: $secondary;
-        width: 100%;
+    label {
+      font-size: 1rem;
+      font-weight: $black;
+      color: $secondary;
+      width: 100%;
     }
 
-    input{
-        border-radius: 10px;
-        width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 2rem;
+    input {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
     }
 
-    select{
-        border-radius: 10px;
-        width: 100%;
-        padding: 0.8rem;
-        margin-bottom: 2rem;
+    select {
+      border-radius: 10px;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 2rem;
     }
 
-    textarea{
-        border-radius: 10px;
-        width: 100%;
+    textarea {
+      border-radius: 10px;
+      width: 100%;
     }
 
-    #tryBeta{
-        @include button-hover-sm;
-        font-weight: $black;
-        border-radius: 10px;
-
+    #tryBeta {
+      @include button-hover-sm;
+      font-weight: $black;
+      border-radius: 10px;
     }
-}
+  }
 }
